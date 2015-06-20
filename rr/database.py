@@ -8,6 +8,7 @@ databases from Fisher's original work.'''
 
 
 import numpy
+import pkg_resources
 
 
 # A list of protocols we implement
@@ -43,7 +44,7 @@ def load():
 
   import csv
   data = dict([(k,[]) for k in CLASSES])
-  with open('data.csv', 'rb') as f:
+  with open(pkg_resources.resource_filename(__name__, 'data.csv'), 'rb') as f:
     reader = csv.reader(f)
     for k, row in enumerate(reader):
       if not k: continue
