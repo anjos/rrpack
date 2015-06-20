@@ -28,7 +28,7 @@ setup(
 
    entry_points = {
      'console_scripts': [
-       'paper.py = rr.scripts.paper:main',
+       'paper.py = rr.paper:main',
        ],
      },
 
