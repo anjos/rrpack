@@ -1,2 +1,2 @@
-include LICENSE README.rst
+include LICENSE README.rst bootstrap_buildout.py buildout.cfg
 include rr/data.csv

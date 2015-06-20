@@ -12,10 +12,10 @@ import itertools
 import numpy
 numpy.seterr(divide='ignore')
 
-import database
-import preprocessor
-import algorithm
-import analysis
+from . import database
+from . import preprocessor
+from . import algorithm
+from . import analysis
 
 
 def test_one(protocol, variables):
