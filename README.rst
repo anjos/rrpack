@@ -21,9 +21,10 @@ indirectly via this software package.
 Installation
 ------------
 
-This package depends on `numpy <http://www.numpy.org>`_ and `scipy
-<http://www.scipy.org>`_ to run properly. Please install a modern version of
-these packages before trying to run the code examples.
+Run::
+
+  $ python bootstrap_buildout.py
+  $ ./bin/buildout
 
 The tests on my paper were executed on a machine running Xubuntu 14.0.2
 installation with Python 2.7.
@@ -35,7 +36,7 @@ Running
 I have created a script that can run the source code reproducing all tables
 from the above paper. Run it like so::
 
-  $ python ./paper.py
+  $ ./bin/paper.py
 
 The contents of each table in the paper should be printed one after the other.
 
@@ -45,7 +46,7 @@ Troubleshooting
 
 You can run unit tests I have prepared like this::
 
-  $ nosetests ./test.py
+  $ ./bin/nosetests
 
 In case of problems, please get in touch with me `by e-mail
 <mailto:john.doe@example.com>`_.
