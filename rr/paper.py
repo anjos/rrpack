@@ -94,7 +94,7 @@ def test_impact_of_variables_all(tabnum):
     print ("%-45s" % ' + '.join(database.VARIABLES)), "| %d%%" % (100 * result,)
 
 
-if __name__ == '__main__':
+def main():
 
   print "Main script for Logistic Regression on Iris Flowers."
   test_impact_of_variables_single(1)
