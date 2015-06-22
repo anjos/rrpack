@@ -45,13 +45,13 @@ def test_impact_of_variables_single(tabnum):
 
   for n, p in enumerate(database.PROTOCOLS):
 
-    print "\nTable %d: Single variables for Protocol `%s`:" % \
-      (n+tabnum, p)
-    print 60*"-"
+    print("\nTable %d: Single variables for Protocol `%s`:" % \
+      (n+tabnum, p))
+    print(60*"-")
 
     for k in database.VARIABLES:
       result = test_one(p, [k])
-      print ("%-15s" % k), "| %d%%" % (100 * result,)
+      print("%s %s" % ("%-15s" % k, "| %d%%" % (100 * result,)))
 
 
 def test_impact_of_variables_2by2(tabnum):
@@ -59,13 +59,13 @@ def test_impact_of_variables_2by2(tabnum):
 
   for n, p in enumerate(database.PROTOCOLS):
 
-    print "\nTable %d: Variable combinations, 2x2 for Protocol `%s`:" % \
-      (n+tabnum, p)
-    print 60*"-"
+    print("\nTable %d: Variable combinations, 2x2 for Protocol `%s`:" % \
+      (n+tabnum, p))
+    print(60*"-")
 
     for k in itertools.combinations(database.VARIABLES, 2):
       result = test_one(p, k)
-      print ("%-30s" % ' + '.join(k)), "| %d%%" % (100 * result,)
+      print("%s %s" % ("%-30s" % ' + '.join(k), "| %d%%" % (100 * result,)))
 
 
 def test_impact_of_variables_3by3(tabnum):
@@ -73,13 +73,13 @@ def test_impact_of_variables_3by3(tabnum):
 
   for n, p in enumerate(database.PROTOCOLS):
 
-    print "\nTable %d: Variable combinations, 3x3 for Protocol `%s`:" % \
-            (n+tabnum, p)
-    print 60*"-"
+    print("\nTable %d: Variable combinations, 3x3 for Protocol `%s`:" % \
+            (n+tabnum, p))
+    print(60*"-")
 
     for k in itertools.combinations(database.VARIABLES, 3):
       result = test_one(p, k)
-      print ("%-45s" % ' + '.join(k)), "| %d%%" % (100 * result,)
+      print("%s %s" % ("%-45s" % ' + '.join(k), "| %d%%" % (100 * result,)))
 
 
 def test_impact_of_variables_all(tabnum):
@@ -87,16 +87,16 @@ def test_impact_of_variables_all(tabnum):
 
   for k, p in enumerate(database.PROTOCOLS):
 
-    print "\nTable %d: All variables for Protocol `%s`:" % (k+tabnum, p)
-    print 60*"-"
+    print("\nTable %d: All variables for Protocol `%s`:" % (k+tabnum, p))
+    print(60*"-")
 
     result = test_one(p, database.VARIABLES)
-    print ("%-45s" % ' + '.join(database.VARIABLES)), "| %d%%" % (100 * result,)
+    print("%s %s" % ("%-45s" % ' + '.join(database.VARIABLES), "| %d%%" % (100 * result,)))
 
 
 def main():
 
-  print "Main script for Logistic Regression on Iris Flowers."
+  print("Main script for Logistic Regression on Iris Flowers.")
   test_impact_of_variables_single(1)
   test_impact_of_variables_2by2(3)
   test_impact_of_variables_3by3(5)
