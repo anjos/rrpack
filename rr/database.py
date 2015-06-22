@@ -13,8 +13,8 @@ import pkg_resources
 
 # A list of protocols we implement
 PROTOCOLS = {
-        'proto1': {'train': xrange(0, 30), 'test': xrange(30, 50)},
-        'proto2': {'train': xrange(20, 50), 'test': xrange(0, 20)},
+        'proto1': {'train': range(0, 30), 'test': range(30, 50)},
+        'proto2': {'train': range(20, 50), 'test': range(0, 20)},
         }
 
 # Subsets of the database in each protocol
