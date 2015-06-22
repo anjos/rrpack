@@ -29,8 +29,8 @@ Run::
   $ python bootstrap_buildout.py
   $ ./bin/buildout
 
-The tests on my paper were executed on a machine running Xubuntu 14.0.2
-installation with Python 2.7.
+The tests on my paper were executed on a machine running Ubuntu 12.04, with
+Python versions 2.6, 2.7, 3.3 and 3.4, providing the same results.
 
 
 Running
