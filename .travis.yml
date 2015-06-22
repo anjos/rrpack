@@ -1,3 +1,4 @@
+language: python
 install:
   - python bootstrap-buildout.py
   - ./bin/buildout
