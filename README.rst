@@ -1,3 +1,6 @@
+.. image:: https://travis-ci.org/anjos/rrpack.svg?branch=master
+    :target: https://travis-ci.org/anjos/rrpack
+
 #################################################################
 Reproducible Logistic Regression on Fisher's Iris Flower Database
 #################################################################
