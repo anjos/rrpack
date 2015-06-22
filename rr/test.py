@@ -5,8 +5,9 @@
 
 '''Test unit for analysis code'''
 
-import analysis
 import numpy
+
+from . import analysis
 
 
 def doit(predictions, true_labels, expected):
