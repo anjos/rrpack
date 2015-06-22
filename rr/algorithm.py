@@ -372,7 +372,7 @@ class MultiClassTrainer:
       # use one-versus-all strategy
       machines = []
       for k in range(len(X)):
-        NC_range = range(0,k) + range(k+1,len(X))
+        NC_range = list(range(0,k)) + list(range(k+1,len(X)))
         Xp = numpy.array([numpy.vstack(X[NC_range]), X[k]])
         machines.append(_trainer.train(Xp))
 
