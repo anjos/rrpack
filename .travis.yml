@@ -1,4 +1,8 @@
 language: python
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq --force-yes libatlas-dev libatlas-base-dev liblapack-dev
+  - pip install --find-links https://www.idiap.ch/software/bob/wheels/travis/ --use-wheel sphinx nose numpy scipy
 install:
   - python bootstrap-buildout.py
   - ./bin/buildout
